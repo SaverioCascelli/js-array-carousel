@@ -1,0 +1,61 @@
+*{
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.wrapper{
+    height: 100vh;
+    width: 75%;
+    margin: 0  auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100%;
+    background-color: red;
+    height: 600px;
+    position: relative;
+    
+}
+
+.container .album{
+    height: 100%;
+}
+
+.container img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.arrow{
+    position: absolute;
+    transform: translateX(-50%);
+    font-size: large;
+    background-color: rgba(255, 255, 255 , 0.25);
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+}
+
+.arrow:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+.arrow.top{
+    top: 5px;
+    left: 50%;
+}
+
+.arrow.bottom{
+    bottom: 5px;
+    left: 50%;
+}
