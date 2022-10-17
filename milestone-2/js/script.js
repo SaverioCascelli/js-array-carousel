@@ -6,30 +6,30 @@ const topButton = document.querySelector(".arrow.top");
 const bottomButton = document.querySelector(".arrow.bottom");
 
 for(let i = 0 ; i < imageSource.length; i++ ){
-    album.innerHTML += `<img class="sc-img d-none" src="../img/${imageSource[i]}" alt="">`;
+    album.innerHTML += `<img class="sc-img" src="../img/${imageSource[i]}" alt="">`;
 }
 
 const imgHtmlArr = document.getElementsByClassName("sc-img");
 
-imgHtmlArr[imgCounter].classList.remove("d-none");
+imgHtmlArr[imgCounter].classList.add("active");
 
 topButton.addEventListener("click" , function(){
-    imgHtmlArr[imgCounter].classList.add("d-none");
+    imgHtmlArr[imgCounter].classList.remove("active");
     if(imgCounter === 0){
         imgCounter = imageSource.length-1;
     }else{
         imgCounter--;
     }
-    imgHtmlArr[imgCounter].classList.remove("d-none");
+    imgHtmlArr[imgCounter].classList.add("active");
 })
 
 bottomButton.addEventListener("click" , function(){
-    imgHtmlArr[imgCounter].classList.add("d-none");
+    imgHtmlArr[imgCounter].classList.remove("active");
     if(imgCounter === imageSource.length-1){
         imgCounter = 0;
     }else{
         imgCounter++;
     }
-    imgHtmlArr[imgCounter].classList.remove("d-none");
+    imgHtmlArr[imgCounter].classList.add("active");
 })
 

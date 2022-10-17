@@ -59,7 +59,10 @@
     bottom: 5px;
     left: 50%;
 }
-
-.d-none{
+.album img{
     display: none;
+}
+
+.album img.active{
+    display: inline-block;
 }
