@@ -48,16 +48,17 @@
 
 .container-right .box-img{
     height: calc( 100% / 5);
+    filter: brightness(.5); 
 }
 
 .box-img img{
     width: 100%;
     object-fit: cover;
     height: 100%;
-    filter: brightness(.5); 
+    
 }
 
-.container-right img.active{
+.container-right .box-img.active{
     filter: brightness(1);
 }
 

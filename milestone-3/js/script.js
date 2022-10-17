@@ -14,26 +14,33 @@ for(let i = 0 ; i < imageSource.length; i++ ){
 }
 
 const imgHtmlArr = document.getElementsByClassName("sc-img");
+const imgPreviewArr = document.getElementsByClassName("box-img");
 
 imgHtmlArr[imgCounter].classList.add("active");
+imgPreviewArr[imgCounter].classList.add("active");
 
 topButton.addEventListener("click" , function(){
     imgHtmlArr[imgCounter].classList.remove("active");
+    imgPreviewArr[imgCounter].classList.remove("active");
+
     if(imgCounter === 0){
         imgCounter = imageSource.length-1;
     }else{
         imgCounter--;
     }
     imgHtmlArr[imgCounter].classList.add("active");
+    imgPreviewArr[imgCounter].classList.add("active");
 })
 
 bottomButton.addEventListener("click" , function(){
     imgHtmlArr[imgCounter].classList.remove("active");
+    imgPreviewArr[imgCounter].classList.remove("active");
     if(imgCounter === imageSource.length-1){
         imgCounter = 0;
     }else{
         imgCounter++;
     }
     imgHtmlArr[imgCounter].classList.add("active");
+    imgPreviewArr[imgCounter].classList.add("active");
 })
 
