@@ -4,9 +4,13 @@ const album = document.querySelector(".album");
 let imgCounter = 0;
 const topButton = document.querySelector(".arrow.top");
 const bottomButton = document.querySelector(".arrow.bottom");
+const imgPreview = document.querySelector(".img-preview");
 
 for(let i = 0 ; i < imageSource.length; i++ ){
     album.innerHTML += `<img class="sc-img" src="../img/${imageSource[i]}" alt="">`;
+    imgPreview.innerHTML += `<div class="box-img">
+                                <img  src="../img/${imageSource[i]}" alt="">
+                            </div>`;
 }
 
 const imgHtmlArr = document.getElementsByClassName("sc-img");
