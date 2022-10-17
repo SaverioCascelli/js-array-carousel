@@ -60,6 +60,7 @@
 
 .container-right .box-img.active{
     filter: brightness(1);
+    border: 3px solid lightgray;
 }
 
 
